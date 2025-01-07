@@ -49,10 +49,9 @@ class StrokeClassification(nn.Module):
 @st.cache_resource
 def load_models():
     # Load XGBoost model
-    xgb_clf = joblib.load(
-        "XGBoost_Model.pkl")
+    xgb_clf = joblib.load("XGBoost_Model.pkl")
     # Load CNN model
-    CNN_path = "entire_model.pth"
+    gdown.download("https://drive.google.com/uc?id=11Bqvxa74liMYA5hAh4JFsxPRBuXPyRhw", cnn_path, quiet=False)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     cnn_clf = torch.load(CNN_path, map_location=device)
     cnn_clf.eval()
