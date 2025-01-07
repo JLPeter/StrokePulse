@@ -50,9 +50,9 @@ class StrokeClassification(nn.Module):
 def load_models():
     # Load XGBoost model
     xgb_clf = joblib.load(
-        "C:\\Users\\ealu\\Documents\\Research_Peter\\Research_DrGobbert\\Stroke_Streamlit\\XGBoost_Model.pkl")
+        "XGBoost_Model.pkl")
     # Load CNN model
-    CNN_path = "C:\\Users\\ealu\\Documents\\Research_Peter\\Research_DrGobbert\\Stroke_Streamlit\\entire_model.pth"
+    CNN_path = "entire_model.pth"
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     cnn_clf = torch.load(CNN_path, map_location=device)
     cnn_clf.eval()
@@ -102,7 +102,7 @@ def load_encoder_scaler():
     dummy_data = np.array([[1, 1, 1, 1, 10, 0]])  
     encoder.fit(dummy_data)
     scaler = joblib.load(
-        "C:\\Users\\ealu\\Documents\\Research_Peter\\Research_DrGobbert\\Stroke_Streamlit\\StandardScaler.pkl")
+        "StandardScaler.pkl")
     return encoder, scaler
 
 encoder, scaler = load_encoder_scaler()
