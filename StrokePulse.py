@@ -227,7 +227,7 @@ with st.form(key="user_input_form", clear_on_submit=False):
     if Ever_cancer_display is not None:
         Ever_cancer = Ever_cancer_cats[Ever_cancer_display]
 
-    uploaded_file = st.file_uploader("Please upload a image of your face to check for abnormalities. Please make sure "
+    uploaded_file = st.camera_input("Please take an image of your face to check for abnormalities. Please make sure that "
                                      "you are looking directly at the camera and that your face is centered in the "
                                      "image.", type=["jpg", "jpeg", "png"])
     submit_button = st.form_submit_button(label="Analyze")
