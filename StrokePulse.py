@@ -113,7 +113,7 @@ encoder, scaler = load_encoder_scaler()
 
 ######################################################################################################################
 # Streamlit App
-st.title("Stroke Risk Assessment Tool")
+st.title("StrokePulse: Stroke Risk Assessment Tool")
 st.write("This tool uses AI to assess stroke risk. Please enter your details and upload a image of your face.")
 
 #Initialize values
@@ -197,7 +197,7 @@ with st.form(key="user_input_form", clear_on_submit=False):
                                         index=None, placeholder="Select...")
     if Age_Category_display is not None:
         Age_Category = Age_Category_cats[Age_Category_display]
-    BMI = st.slider("Enter your BMI:", min_value=0.0, max_value=100.0, step=0.1)
+    BMI = st.slider("What is your BMI:", min_value=0.0, max_value=100.0, step=0.1)
     Smoking_status_cats = {"Current smoker": 2, "Former smoker": 1, "Never smoked": 0}
     Smoking_status_display = st.selectbox("What best describes your smoking status?",
                                           ["Current smoker", "Former smoker", "Never smoked"],
