@@ -173,9 +173,9 @@ with st.form(key="user_input_form", clear_on_submit=False):
                                                ["No", "Yes"], index=None, placeholder="Select...")
     if Heart_DiseaseAttack_display is not None:
         Heart_DiseaseAttack = Heart_DiseaseAttack_cats[Heart_DiseaseAttack_display]
-    Athasma_status_cats = {"Currently have athsma": 1, "Formerly had athsma": 2, "Never had athsma": 3}
-    Athasma_status_display = st.selectbox("What is your athsma status?", ["Currently have athsma", "Formerly had athsma",
-                                                                          "Never had athsma"],
+    Athasma_status_cats = {"Currently have asthma": 1, "Formerly had asthma": 2, "Never had asthma": 3}
+    Athasma_status_display = st.selectbox("What is your asthma status?", ["Currently have asthma", "Formerly had asthma",
+                                                                          "Never had asthma"],
                                           index=None, placeholder="Select...")
     if Athasma_status_display is not None:
         Athasma_status = Athasma_status_cats[Athasma_status_display]
