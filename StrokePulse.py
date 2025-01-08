@@ -53,9 +53,11 @@ def load_models():
     # Load XGBoost model
     xgb_clf = joblib.load("XGBoost_Model.pkl")
     # Load CNN model
-    gdown.download("https://drive.google.com/uc?id=11Bqvxa74liMYA5hAh4JFsxPRBuXPyRhw", CNN_path, quiet=False)
+    cnn_path = "entire_model.pth"
+    if not os.path.exists(cnn_path):
+        gdown.download("https://drive.google.com/uc?id=11Bqvxa74liMYA5hAh4JFsxPRBuXPyRhw", cnn_path, quiet=False)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    cnn_clf = torch.load(CNN_path, map_location=device)
+    cnn_clf = torch.load(cnn_path, map_location=device)
     cnn_clf.eval()
     return xgb_clf, cnn_clf, device
 
