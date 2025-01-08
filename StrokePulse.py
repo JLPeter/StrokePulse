@@ -233,7 +233,7 @@ with st.form(key="user_input_form", clear_on_submit=False):
 
     uploaded_file = st.camera_input("Please take an image of your face to check for abnormalities. Please make sure that "
                                      "you are looking directly at the camera and that your face is centered in the "
-                                     "image.", type=["jpg", "jpeg", "png"])
+                                     "image.")
     submit_button = st.form_submit_button(label="Analyze")
 
 if submit_button:
