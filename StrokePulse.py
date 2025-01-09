@@ -226,7 +226,7 @@ with st.form(key="user_input_form", clear_on_submit=False):
     if Diff_WalkOrStairs_display is not None:
         Diff_WalkOrStairs = Diff_WalkOrStairs_cats[Diff_WalkOrStairs_display]
     Ever_cancer_cats = {"No": 0, "Yes": 1}
-    Ever_cancer_display = st.selectbox("Have you ever recieved a diagnosis of cancer?", ["No", "Yes"],
+    Ever_cancer_display = st.selectbox("Have you ever received a diagnosis of cancer?", ["No", "Yes"],
                                        index=None, placeholder="Select...")
     if Ever_cancer_display is not None:
         Ever_cancer = Ever_cancer_cats[Ever_cancer_display]
