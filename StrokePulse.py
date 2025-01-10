@@ -286,7 +286,7 @@ if submit_button:
                 st.error("Our analysis suggests a potential stroke. Consider consulting a healthcare professional. "
                          "However, this tool cannot replace a professional diagnosis and is for informational purposes "
                          "only. If you are concerned about stroke symptoms, please consult a healthcare professional.")
-            elif (xgb_class == 1 or cnn_class == 1) or (0.4 <= xgb_prob <= 0.5 or 0.68105669021 <= cnn_prob <= 0.7310566902160645):
+            elif xgb_class == 1 or cnn_class == 1:
                 st.warning("Our analysis indicates a borderline result, suggesting that you may be close to the "
                            "threshold for indicating a stroke. Consider consulting a healthcare professional. "
                            "However, this tool cannot replace a professional diagnosis and is for informational purposes "
